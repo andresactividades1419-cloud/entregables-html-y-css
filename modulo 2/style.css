@@ -1,0 +1,282 @@
+* {
+  margin: 0; /* Quita espacios externos */
+  padding: 0; /* Quita espacios internos */
+  box-sizing: border-box; /* Evita que los tamaños se dañen */
+  font-family: "Segoe UI", Tahoma, sans-serif; /* Letra fácil de leer */
+}
+
+/*   Ajustes básicos para toda la página*/
+
+html,
+body {
+  width: 100%; /* La página usa todo el ancho */
+  min-height: 100vh; /* Usa todo lo alto de la pantalla */
+  background: #f4f6f8; /* Fondo gris claro suave */
+}
+
+/* HEADER TIPO TIENDA */
+
+header {
+  width: 100%; /* Ocupa todo el ancho */
+  background: linear-gradient(
+    90deg,
+    #0876ec,
+    #ea0505
+  ); /* Degradado oscuro bonito */
+  color: white; /* Texto blanco */
+  padding: 20px 40px; /* Espacio interno */
+  font-size: 24px; /* Texto grande */
+  font-weight: bold; /* Texto más fuerte */
+  border-radius: 0 0 25px 25px; /* Esquinas redondeadas abajo */
+  margin-bottom: 20px; /* Separación con el resto */
+}
+
+/*  CONTENEDOR PRINCIPAL */
+
+main {
+  width: 100%; /* Usa todo el ancho */
+  min-height: 100vh; /* Usa toda la altura */
+  background: #fff; /* Fondo blanco */
+  border-radius: 25px; /* Bordes redondos */
+  padding: 30px 40px; /* Espacio interno para que nada quede pegado */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* GALERÍA Y ESPECIFICACIONES */
+
+.Galeria {
+  width: 58%; /* Ocupa la parte izquierda */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px; /* Espacio interno */
+  float: left; /* Se coloca a la izquierda */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+.Especificaciones {
+  width: 38%; /* Ocupa la parte derecha */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px; /* Espacio interno */
+  float: right; /* Se coloca a la derecha */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+/* Limpia los floats para que el diseño no se rompa */
+/* Esto crea un bloque invisible al final para evitar que los elementos con float dañen el orden de la página */
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*  TARJETAS DE PRODUCTOS */
+
+.card {
+  width: 30%; /* Tamaño de cada tarjeta */
+  display: inline-block; /* Se alinean una al lado de otra */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 16px; /* Bordes suaves */
+  padding: 15px; /* Espacio interno */
+  text-align: center; /* Centra el contenido */
+  margin-right: 2%; /* Espacio entre tarjetas */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+
+.card:hover {
+  transform: translateY(-6px); /* Sube un poco */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
+}
+
+/* Imagen dentro de la tarjeta */
+
+.card img {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 180px; /* Alto fijo */
+  object-fit: contain; /* No deforma la imagen */
+  border-radius: 12px; /* Bordes suaves */
+}
+
+/* Título del producto */
+
+.card h3 {
+  margin: 12px 0; /* Espacio arriba y abajo */
+  font-size: 19px;
+}
+
+/* Botón estilo tienda */
+
+.card button {
+  width: 100%; /* Botón ancho completo */
+  padding: 12px; /* Tamaño cómodo */
+  background: linear-gradient(135deg, #2563eb, #1e40af); /* Azul degradado */
+  color: white; /* Texto blanco */
+  font-size: 15px;
+  border: none; /* Sin borde feo */
+  border-radius: 12px; /* Bordes suaves */
+  cursor: pointer; /* Manito */
+  transition: 0.3s ease; /* Cambio suave */
+}
+
+/* Efecto al pasar el mouse por el botón */
+
+.card button:hover {
+  background: linear-gradient(135deg, #1e3a8a, #111827); /* Más oscuro */
+  transform: scale(1.02); /* Se agranda un poco */
+}
+
+/*  TABLA DE ESPECIFICACIONES */
+
+table {
+  width: 100%; /* Ocupa todo el ancho */
+  border-collapse: collapse; /* Quita espacios entre bordes */
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+th {
+  background: #111; /* Fondo negro */
+  color: white; /* Letras blancas */
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ddd; /* Línea gris suave abajo */
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* SECCIÓN DESCRIPCIÓN */
+
+.Descipcion {
+  margin-top: 35px; /* Separa del contenido de arriba */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 20px; /* Bordes suaves */
+  padding: 30px; /* Espacio interno */
+  box-shadow: 0 6px 20px rgba(16, 27, 228, 0.08); /* Sombra ligera */
+}
+
+.Descipcion h4 {
+  margin-top: 15px; /* Espacio entre subtítulos */
+}
+
+/*  OPINIONES DE CLIENTES */
+
+.Opiniones {
+  margin-top: 25px; /* Separación de arriba */
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 20px; /* Bordes suaves */
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(232, 75, 18, 0.08);
+
+  display: grid; /* Sistema de cuadrícula */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* Espacio entre cuadros */
+}
+.Opiniones h2 {
+  grid-column: 1/-1; /* El título ocupa todo el ancho */
+  margin-bottom: 5px; /* Menos espacio debajo del título */
+}
+
+/* Separación para la sección Descripción */
+
+.descripcion {
+  margin-top: 50px; /* separa de lo que está arriba */
+  padding-top: 20px;
+}
+
+/* Tarjeta de cada opinión */
+
+.review {
+  background: #f1f5f9; /* Fondo gris suave */
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: inset 0 0 0 1px #e5e7eb; /* Borde interno */
+}
+
+/* Avatar (círculo con letra) */
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #e45108, #788bc7); /* Azul degradado */
+  color: white; /* Letra blanca */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra bonita */
+}
+
+/* ENLACES */
+
+.Enlaces {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Enlaces ul {
+  list-style: none;
+}
+
+.Enlaces li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.Enlaces a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2563eb; /* Azul llamativo */
+}
+
+/* Efecto al pasar el mouse */
+.Enlaces a:hover {
+  text-decoration: underline;
+  color: #ff0011;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #09fb3a, #066bf8); /* Degradado */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+/* Esta parte sirve para que la página se vea bien en pantallas pequeñas como celulares y tablets */
+@media (max-width: 900px) {
+  .Galeria,
+  .Especificaciones {
+    width: 100%; /* Hace que las secciones ocupen todo el ancho */
+    float: none; /* Quita los elementos flotantes para que se acomoden uno debajo del otro */
+    margin-bottom: 20px; /* Agrega espacio entre las secciones */
+  }
+}
+
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .Opiniones {
+    grid-template-columns: 1fr;
+  }
+
